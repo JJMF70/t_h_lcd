@@ -11,6 +11,8 @@ input.onPinPressed(TouchPin.P0, function () {
     I2C_LCD1602.ShowString("TEMP.INT:", 0, 0)
     I2C_LCD1602.ShowNumber(input.temperature(), 10, 0)
     I2C_LCD1602.ShowString("C", 15, 0)
+    I2C_LCD1602.ShowString("CAL.AIR:", 0, 1)
+    I2C_LCD1602.ShowNumber(pins.analogReadPin(AnalogPin.P3), 10, 1)
     basic.pause(2000)
     I2C_LCD1602.clear()
     I2C_LCD1602.BacklightOff()
